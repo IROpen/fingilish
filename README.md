@@ -1,5 +1,5 @@
 # fingilish
-convert fingilish to farsi
+convert fingilish to farsi  
 example:
 ```javascript
 const fn = require('fingilish');
