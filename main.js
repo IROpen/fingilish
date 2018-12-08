@@ -1,5 +1,7 @@
 const rules = [
+[',','،'],
 ['aa','ا'],
+['oo','و'],
 ['h2','ح'],
 ['h1','ه'],
 ['sh','ش'],
@@ -46,6 +48,13 @@ const rules = [
 const words = require('./words');
 
 const f = function (word){
+    if (word[0]=='$'){
+        word = word.substr(1);
+        rules.forEach(rule=>{
+            word = word.replace(new RegExp(rule[0],'g'),rule[1]);    
+        });
+        return word;    
+    }
     if (words[word]) return words[word];
     rules.forEach(rule=>{
         word = word.replace(new RegExp(rule[0],'g'),rule[1]);    
@@ -55,5 +64,4 @@ const f = function (word){
 
 f.jomle = x=> x.split(' ').map(f).join(' ');
 module.exports = f;
-
 
