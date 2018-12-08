@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "githubb"
+    "url": "git+https://github.com/IROpen/fingilish.git"
   },
   "keywords": [
     "farsi",
